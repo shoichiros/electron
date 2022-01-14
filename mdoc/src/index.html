@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+    <title>mDoc</title>
+  </head>
+
+  <body>
+    <div id="loading">
+      <object data="./assets/icon/loading.svg" type="image/svg+xml"></object>
+      <span>processing...</span>
+    </div>
+    <main id="main">
+      <div id="userNav">
+        <button id="exportMarkdown">
+          <object
+            data="./assets/icon/markdown-file.svg"
+            type="image/svg+xml"
+          ></object
+          >Export Markdown
+        </button>
+        <button id="exportHTML">
+          <object
+            data="./assets/icon/html-file.svg"
+            type="image/svg+xml"
+          ></object
+          >Export HTML
+        </button>
+        <button id="exportPDF">
+          <object
+            data="./assets/icon/pdf-file.svg"
+            type="image/svg+xml"
+          ></object
+          >Export PDF
+        </button>
+      </div>
+      <div id="mainContents">
+        <textarea
+          id="documentArea"
+          placeholder="Markdown doc is here..."
+          spellcheck="true"
+        ></textarea>
+      </div>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>

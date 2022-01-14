@@ -1,0 +1,114 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Electron settings */
+* {
+  color: #ccc;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  background-color: #222;
+  overflow: hidden;
+  -webkit-app-region: drag;
+}
+
+button,
+textarea,
+a {
+  -webkit-app-region: no-drag;
+}
+
+/* Loading */
+#loading {
+  display: none; /* Loading style disply 'flex' */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
+
+#loading object {
+  animation: rotation 3s ease infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* User nav */
+#userNav {
+  background-color: #333;
+  padding: 15px 0 0 0;
+  height: 100vh;
+}
+
+#userNav button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  background-color: #333;
+  color: #ccc;
+  font-weight: bold;
+  padding: 15px 22px 15px 14px;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+#userNav button:hover {
+  background-color: #444;
+}
+
+#userNav object {
+  margin: 0 5px 0 0;
+}
+
+/* Main contents */
+#main {
+  display: flex;
+}
+
+#mainContents {
+  flex: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+#documentArea {
+  width: 100%;
+  height: 100vh;
+  max-width: 800px;
+  border: none;
+  background-color: #222;
+  display: block;
+  font-size: 16px;
+  padding: 30px 25px 25px 25px;
+  margin: 0 auto;
+  line-height: 30px;
+  outline: none;
+  resize: none;
+}
+
+#documentArea::-webkit-scrollbar {
+  display: none;
+}

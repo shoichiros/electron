@@ -1,0 +1,24 @@
+{
+  "name": "mdoc",
+  "version": "1.0.0-alpha",
+  "description": "Make HTML or PDF from Markdown.",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "shoichiro saito",
+  "license": "MIT",
+  "build": {
+    "appId": "jp.ziyuss.mDoc",
+    "productName": "mDoc",
+    "icon": "./src/assets/icon/logo.png"
+  },
+  "devDependencies": {
+    "electron": "^16.0.5",
+    "electron-builder": "^22.14.5"
+  },
+  "dependencies": {
+    "markdown-it": "^12.3.2",
+    "puppeteer-core": "^13.0.1"
+  }
+}
